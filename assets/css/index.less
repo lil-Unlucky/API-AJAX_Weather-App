@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Oswald:wght@200..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jersey 15", "Oswald", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.weather-app {
+    background: rgb(34,195,168);
+    background: linear-gradient(0deg, rgba(34,195,168,1) 0%, rgba(44,219,225,1) 52%, rgba(53,45,253,1) 100%);
+    background-image: url(../img/background-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    width: 400px;
+    height: 650px;
+
+    .weather-app__top {
+        .search-field {
+            margin: 8px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+
+            input[name='searchInput'] {
+                padding-left: 8px;
+                height: 100%;
+                border: none;
+                border-radius: 6px 0 0 6px;
+                background-color: rgb(255, 255, 255);
+                font-size: 20px;
+            }
+            input[name='searchInput']:focus {
+                outline: none;
+            }
+            .search-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 26px;
+                height: 100%;
+                border-radius: 0 6px 6px 0;
+                background-color: rgb(25, 201, 201);
+                transition: background-color .2s ease-in-out;
+            }
+            .search-btn:hover {
+                cursor: pointer;
+                background-color: rgb(52, 240, 240);
+            }
+        }
+    }
+    .weather-app__bottom {
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .weather-app__bottom-general-info {
+            margin-bottom: 50px;
+
+            .general-info {
+
+                .general-info__weather-ico {
+    
+                    img {
+                        width: 80%;
+                    }
+
+                }
+
+                .general-info__weather-desc {
+                    font-size: 24px;
+                }
+                .general-info__weather-temp,
+                .general-info__weather-wind-speed,
+                .general-info__weather-humidity {
+                    padding: 5px;
+                    font-size: 22px;
+                }
+
+            }
+        }
+        .weather-app__bottom-hourly-info {
+            padding: 0 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .hourly-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+                width: 100px;
+                height: 150px;
+                background-color: #2ceef2;
+                border-radius: 6px;
+                transition: all .2s ease-in-out;
+                margin-right: 10px;
+            }
+            .hourly-item:last-child {
+                margin-right: 0;
+            }
+            .hourly-item:hover {
+                background-color: #77edef;
+                scale: 1.1;
+            }
+        }
+    }
+}

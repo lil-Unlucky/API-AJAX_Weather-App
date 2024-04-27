@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Jersey 15';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jersey15/v2/_6_9EDzuROGsUuk2TWjSYg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs13FvgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs169vgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs18NvgUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1y9ogUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Jersey 15", "Oswald", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: #22c1c3;
+  background: linear-gradient(0deg, #22c1c3 0%, #fdbb2d 100%);
+}
+.weather-app {
+  background: #22c3a8;
+  background: linear-gradient(0deg, #22c3a8 0%, #2cdbe1 52%, #352dfd 100%);
+  background-image: url(../img/background-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  width: 400px;
+  height: 650px;
+}
+.weather-app .weather-app__top .search-field {
+  margin: 8px 0;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+}
+.weather-app .weather-app__top .search-field input[name='searchInput'] {
+  padding-left: 8px;
+  height: 100%;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+.weather-app .weather-app__top .search-field input[name='searchInput']:focus {
+  outline: none;
+}
+.weather-app .weather-app__top .search-field .search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  height: 100%;
+  border-radius: 0 6px 6px 0;
+  background-color: #19c9c9;
+  transition: background-color 0.2s ease-in-out;
+}
+.weather-app .weather-app__top .search-field .search-btn:hover {
+  cursor: pointer;
+  background-color: #34f0f0;
+}
+.weather-app .weather-app__bottom {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-general-info {
+  margin-bottom: 50px;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-general-info .general-info .general-info__weather-ico img {
+  width: 80%;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-general-info .general-info .general-info__weather-desc {
+  font-size: 24px;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-general-info .general-info .general-info__weather-temp,
+.weather-app .weather-app__bottom .weather-app__bottom-general-info .general-info .general-info__weather-wind-speed,
+.weather-app .weather-app__bottom .weather-app__bottom-general-info .general-info .general-info__weather-humidity {
+  padding: 5px;
+  font-size: 22px;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-hourly-info {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-hourly-info .hourly-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+  height: 150px;
+  background-color: #2ceef2;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-hourly-info .hourly-item:last-child {
+  margin-right: 0;
+}
+.weather-app .weather-app__bottom .weather-app__bottom-hourly-info .hourly-item:hover {
+  background-color: #77edef;
+  scale: 1.1;
+}
